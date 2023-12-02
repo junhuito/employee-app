@@ -55,7 +55,8 @@ export const EmployeeForm = (props: EmployeeForm) => {
       />
       <div className="block w-full">
         <Toggle
-          label="Status"
+          label={employeeData.status}
+          labelCapitilize={true}
           checked={employeeData.status === EmployeeStatus.ACTIVE}
           onChange={handleToggle}
         />

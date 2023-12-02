@@ -23,6 +23,7 @@ export default function Home() {
 
   return (
     <main className='p-10 space-y-4'>
+      <h1 className="mb-4 text-2xl font-extrabold text-gray-900 dark:text-white md:text-4xl"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">My AYP App</span></h1>
       <EmployeeTable data={employeeTableData} onActionClick={(employeeData) => {
         setModalContent(
           <EmployeeForm

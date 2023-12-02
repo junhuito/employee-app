@@ -31,7 +31,7 @@ export const Button = (props: ButtonDefaultHTMLAttributes & Button) => {
     <button
       {...buttonDefaultHTMLAttributes}
       type={type}
-      className={`text-white ${buttonTheme[theme]} disabled:cursor-not-allowed cursor-pointer font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none`}
+      className={`text-white ${buttonTheme[theme]} disabled:cursor-not-allowed cursor-pointer font-medium rounded-lg text-xs px-2 py-2.5 focus:outline-none`}
     >
       {text}
     </button>
