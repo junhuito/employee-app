@@ -12,7 +12,7 @@ A simple Next.js application that can manage employees
 
 ## Screenshots
 ##### Dark Theme
-![App Screenshot](./assets//dark-theme.png)
+![App Screenshot](./assets/dark-theme.png)
 ##### Light Theme
 ![App Screenshot](./assets/light-theme.png)
 
@@ -61,8 +61,11 @@ To run tests, run the following command
  ┃ ┣ 📜Button.tsx
  ┃ ┣ 📜EmployeeForm.tsx
  ┃ ┣ 📜EmployeeTable.tsx
+ ┃ ┣ 📜Header.tsx
  ┃ ┣ 📜InputField.tsx
  ┃ ┣ 📜Modal.tsx
+ ┃ ┣ 📜SkeletonTable.tsx
+ ┃ ┣ 📜ToastMessage.tsx
  ┃ ┗ 📜Toggle.tsx
  ┣ 📂constants
  ┃ ┗ 📜employee.enum.ts
@@ -77,6 +80,9 @@ To run tests, run the following command
  ┃ ┃ ┃ ┗ 📜employeeSlice.ts
  ┃ ┣ 📜hook.ts
  ┃ ┗ 📜store.ts
+ ┣ 📂utils
+ ┃ ┣ 📜colors.utils.ts
+ ┃ ┗ 📜index.ts
  ┗ 📂__test__
  ┃ ┗ 📂components
  ┃ ┃ ┣ 📂__snapshots__
