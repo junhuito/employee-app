@@ -1,17 +1,16 @@
-import { ChangeEvent, FormEvent, useState } from "react";
-import { Button } from "./Button";
-import { InputField } from "./InputField";
-import { Toggle } from "./Toggle";
-import { EmployeeStatus } from "@/constants/employee.enum";
-import { EmployeeData } from "@/interfaces/employee.interface";
+import { ChangeEvent, FormEvent, useState } from 'react';
+import { Button } from './Button';
+import { InputField } from './InputField';
+import { Toggle } from './Toggle';
+import { EmployeeStatus } from '@/constants/employee.enum';
+import { EmployeeData } from '@/interfaces/employee.interface';
 
 type EmployeeForm = {
   onSubmit?: (callback: EmployeeData) => void;
   data: EmployeeData;
-}
+};
 
 export const EmployeeForm = (props: EmployeeForm) => {
-
   const [employeeData, setEmployeeData] = useState<EmployeeData>(props.data);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -34,26 +33,26 @@ export const EmployeeForm = (props: EmployeeForm) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white dark:bg-primary-700 p-10 rounded-lg space-y-5"
+      className='space-y-5 rounded-lg bg-white p-10 dark:bg-primary-700'
     >
       <InputField
-        label="Name"
-        name="name"
+        label='Name'
+        name='name'
         onChange={handleChange}
-        placeholder="name"
+        placeholder='name'
         required
         value={employeeData.name}
       />
       <InputField
-        type="email"
-        name="email"
-        label="Email"
+        type='email'
+        name='email'
+        label='Email'
         onChange={handleChange}
-        placeholder="johndoe@sample.com"
+        placeholder='johndoe@sample.com'
         required
         value={employeeData.email}
       />
-      <div className="block w-full">
+      <div className='block w-full'>
         <Toggle
           label={employeeData.status}
           labelCapitilize={true}
@@ -61,8 +60,8 @@ export const EmployeeForm = (props: EmployeeForm) => {
           onChange={handleToggle}
         />
       </div>
-      <div className="flex justify-end">
-        <Button type="submit" text="Submit" />
+      <div className='flex justify-end'>
+        <Button type='submit' text='Submit' />
       </div>
     </form>
   );

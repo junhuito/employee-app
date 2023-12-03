@@ -1,11 +1,11 @@
-import { useToggle } from "@/hooks";
+import { useToggle } from '@/hooks';
 
 type Toggle = {
   label?: string;
   checked?: boolean;
   labelCapitilize?: boolean;
   onChange?: (callback: boolean) => void;
-}
+};
 
 export const Toggle = ({
   label = '',
@@ -13,17 +13,25 @@ export const Toggle = ({
   labelCapitilize = false,
   onChange = () => void 0,
 }: Toggle) => {
-
   const { visible, toggle } = useToggle(checked);
 
   return (
-    <label className="relative inline-flex items-center cursor-pointer">
-      <input type="checkbox" checked={visible} className="sr-only peer" onChange={(e) => {
-        toggle();
-        onChange(e.target.checked);
-      }}/>
-      <div className="w-11 h-6 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600 bg-slate-900"></div>
-      <span className={`ms-3 text-sm font-medium select-none ${labelCapitilize ? 'capitalize' : ''}`}>
+    <label className='relative inline-flex cursor-pointer items-center'>
+      <input
+        type='checkbox'
+        checked={visible}
+        className='peer sr-only'
+        onChange={(e) => {
+          toggle();
+          onChange(e.target.checked);
+        }}
+      />
+      <div className="peer h-6 w-11 rounded-full bg-slate-900 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-green-600 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none rtl:peer-checked:after:-translate-x-full"></div>
+      <span
+        className={`ms-3 select-none text-sm font-medium ${
+          labelCapitilize ? 'capitalize' : ''
+        }`}
+      >
         {label}
       </span>
     </label>

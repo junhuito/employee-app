@@ -1,4 +1,4 @@
 export enum EmployeeStatus {
-  ACTIVE = "active",
-  DEACTIVATED = "deactivated",
+  ACTIVE = 'active',
+  DEACTIVATED = 'deactivated',
 }

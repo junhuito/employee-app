@@ -1,23 +1,23 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
+import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
 type ButtonDefaultHTMLAttributes = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 >;
 
-type ButtonTheme = "primary" | "secondary" | "danger";
+export type ButtonTheme = 'primary' | 'secondary' | 'danger';
 
 type Button = {
   text: string;
   theme?: ButtonTheme;
-  type?: "button" | "reset" | "submit";
+  type?: 'button' | 'reset' | 'submit';
 };
 
 export const Button = (props: ButtonDefaultHTMLAttributes & Button) => {
   const {
     text,
-    theme = "primary",
-    type = "button",
+    theme = 'primary',
+    type = 'button',
     ...buttonDefaultHTMLAttributes
   } = props;
 
@@ -31,7 +31,7 @@ export const Button = (props: ButtonDefaultHTMLAttributes & Button) => {
     <button
       {...buttonDefaultHTMLAttributes}
       type={type}
-      className={`text-white ${buttonTheme[theme]} disabled:cursor-not-allowed cursor-pointer font-medium rounded-lg text-xs px-2 py-2.5 focus:outline-none`}
+      className={`text-white ${buttonTheme[theme]} cursor-pointer rounded-lg px-2 py-2.5 text-xs font-medium focus:outline-none disabled:cursor-not-allowed`}
     >
       {text}
     </button>

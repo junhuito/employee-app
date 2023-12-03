@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 import colors from 'tailwindcss/colors';
 
 const config: Config = {
@@ -15,9 +15,9 @@ const config: Config = {
         'btn-primary': colors.blue,
         'btn-secondary': colors.violet,
         'btn-danger': colors.red,
-      }
+      },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;

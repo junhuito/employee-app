@@ -2,7 +2,7 @@ import classnames from 'classnames';
 
 type Modal = {
   children: JSX.Element;
-  visible: boolean;
+  visible?: boolean;
   onDismiss?: () => void;
 };
 
@@ -13,10 +13,11 @@ export const Modal = ({
 }: Modal) => {
   return (
     <div
+      role='modal'
       onClick={onDismiss}
       className={`${classnames({
-        'hidden': !visible,
-      })} bg-black !m-0 bg-opacity-60 fixed !inset-0 z-50 flex justify-center items-center`}
+        hidden: !visible,
+      })} fixed !inset-0 z-50 !m-0 flex items-center justify-center bg-black bg-opacity-60`}
     >
       <div onClick={(e) => e.stopPropagation()}>{children}</div>
     </div>

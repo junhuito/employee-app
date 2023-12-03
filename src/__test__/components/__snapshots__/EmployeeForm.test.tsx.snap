@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmployeeForm should render form 1`] = `
+<div>
+  <form
+    class="space-y-5 rounded-lg bg-white p-10 dark:bg-primary-700"
+  >
+    <div>
+      <label
+        class="mb-2 block text-sm font-medium text-black dark:text-white"
+      >
+        Name
+      </label>
+      <input
+        class="block w-full rounded-lg border-2 border-gray-200 p-2.5 text-sm text-black outline-none"
+        name="name"
+        placeholder="name"
+        required=""
+        type="text"
+        value="test employee"
+      />
+    </div>
+    <div>
+      <label
+        class="mb-2 block text-sm font-medium text-black dark:text-white"
+      >
+        Email
+      </label>
+      <input
+        class="block w-full rounded-lg border-2 border-gray-200 p-2.5 text-sm text-black outline-none"
+        name="email"
+        placeholder="johndoe@sample.com"
+        required=""
+        type="email"
+        value="test@example.com"
+      />
+    </div>
+    <div
+      class="block w-full"
+    >
+      <label
+        class="relative inline-flex cursor-pointer items-center"
+      >
+        <input
+          checked=""
+          class="peer sr-only"
+          type="checkbox"
+        />
+        <div
+          class="peer h-6 w-11 rounded-full bg-slate-900 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-green-600 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none rtl:peer-checked:after:-translate-x-full"
+        />
+        <span
+          class="ms-3 select-none text-sm font-medium capitalize"
+        >
+          active
+        </span>
+      </label>
+    </div>
+    <div
+      class="flex justify-end"
+    >
+      <button
+        class="text-white bg-btn-primary-700 hover:bg-btn-primary-500 cursor-pointer rounded-lg px-2 py-2.5 text-xs font-medium focus:outline-none disabled:cursor-not-allowed"
+        type="submit"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+`;

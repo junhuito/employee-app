@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmployeeTable should render table with employee info 1`] = `
+<div>
+  <div
+    class="relative overflow-x-auto rounded-lg border-2 shadow-md dark:border-none"
+  >
+    <table
+      class="w-full text-left text-sm text-gray-500 rtl:text-right dark:text-gray-400 md:table-fixed"
+    >
+      <caption
+        class="border-b-2 bg-white p-5 text-left text-lg font-semibold text-gray-900 rtl:text-right dark:border-none dark:bg-gray-800 dark:text-white"
+      >
+        Employees
+      </caption>
+      <thead
+        class="uppercas border-b-2 bg-stone-50 text-xs text-gray-700 dark:border-none dark:bg-gray-700 dark:text-gray-400"
+      >
+        <tr>
+          <th
+            class="px-6 py-3 capitalize"
+            scope="col"
+          >
+            ID
+          </th>
+          <th
+            class="px-6 py-3 capitalize"
+            scope="col"
+          >
+            Name & Email
+          </th>
+          <th
+            class="px-6 py-3 capitalize"
+            scope="col"
+          >
+            Status
+          </th>
+          <th
+            class="px-6 py-3 capitalize"
+            scope="col"
+          >
+            <span
+              class="sr-only"
+            >
+              Action
+            </span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="border-b-2 bg-white text-xs hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
+        >
+          <td
+            class="whitespace-nowrap px-6 py-4 font-bold"
+            scope="row"
+          >
+            1
+          </td>
+          <td
+            class="px-6 py-4"
+          >
+            <p>
+              test employee
+            </p>
+            <p>
+              test@example.com
+            </p>
+          </td>
+          <td
+            class="px-6 py-4 capitalize"
+          >
+            <span
+              class="rounded-md px-2 py-1 border border-green-300 bg-green-100 text-green-800"
+            >
+              active
+            </span>
+          </td>
+          <td
+            class="px-6 py-4 text-right"
+          >
+            <button
+              class="text-white bg-btn-primary-700 hover:bg-btn-primary-500 cursor-pointer rounded-lg px-2 py-2.5 text-xs font-medium focus:outline-none disabled:cursor-not-allowed"
+              type="button"
+            >
+              Edit
+            </button>
+          </td>
+        </tr>
+        <tr
+          class="border-b-2 bg-white text-xs hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
+        >
+          <td
+            class="whitespace-nowrap px-6 py-4 font-bold"
+            scope="row"
+          >
+            2
+          </td>
+          <td
+            class="px-6 py-4"
+          >
+            <p>
+              test employee 2
+            </p>
+            <p>
+              test2@example.com
+            </p>
+          </td>
+          <td
+            class="px-6 py-4 capitalize"
+          >
+            <span
+              class="rounded-md px-2 py-1 border border-red-300 bg-red-100 text-red-800"
+            >
+              deactivated
+            </span>
+          </td>
+          <td
+            class="px-6 py-4 text-right"
+          >
+            <button
+              class="text-white bg-btn-primary-700 hover:bg-btn-primary-500 cursor-pointer rounded-lg px-2 py-2.5 text-xs font-medium focus:outline-none disabled:cursor-not-allowed"
+              type="button"
+            >
+              Edit
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
