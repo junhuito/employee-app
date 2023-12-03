@@ -3,40 +3,70 @@
 exports[`EmployeeTable should render table with employee info 1`] = `
 <div>
   <div
-    class="relative overflow-x-auto rounded-lg border-2 shadow-md dark:border-none"
+    class="relative overflow-x-auto border-none"
   >
     <table
-      class="w-full text-left text-sm text-gray-500 rtl:text-right dark:text-gray-400 md:table-fixed"
+      class="w-full rounded-lg text-left text-sm text-gray-500 rtl:text-right dark:text-gray-400 md:table-fixed"
     >
       <caption
-        class="border-b-2 bg-white p-5 text-left text-lg font-semibold text-gray-900 rtl:text-right dark:border-none dark:bg-gray-800 dark:text-white"
+        class="p-5 text-left text-lg font-semibold rtl:text-right dark:border-none  dark:text-white"
       >
         Employees
       </caption>
       <thead
-        class="uppercas border-b-2 bg-stone-50 text-xs text-gray-700 dark:border-none dark:bg-gray-700 dark:text-gray-400"
+        class="uppercas border-b-2 border-t-2 bg-stone-50 text-xs text-gray-700 dark:border-none dark:bg-gray-700 dark:text-gray-400"
       >
         <tr>
           <th
-            class="px-6 py-3 capitalize"
+            class="px-6 py-3 uppercase"
             scope="col"
           >
-            ID
+            Id
           </th>
           <th
-            class="px-6 py-3 capitalize"
+            class="px-6 py-3 uppercase"
             scope="col"
           >
-            Name & Email
+            <div
+              class="flex cursor-pointer items-center"
+            >
+              Name & Email
+              <svg
+                aria-hidden="true"
+                class="ms-1.5 h-3 w-3"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
+                />
+              </svg>
+            </div>
           </th>
           <th
-            class="px-6 py-3 capitalize"
+            class="flex px-6 py-3 uppercase"
             scope="col"
           >
-            Status
+            <div
+              class="flex cursor-pointer items-center"
+            >
+              Status
+              <svg
+                aria-hidden="true"
+                class="ms-1.5 h-3 w-3"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
+                />
+              </svg>
+            </div>
           </th>
           <th
-            class="px-6 py-3 capitalize"
+            class="px-6 py-3 uppercase"
             scope="col"
           >
             <span
@@ -49,81 +79,102 @@ exports[`EmployeeTable should render table with employee info 1`] = `
       </thead>
       <tbody>
         <tr
-          class="border-b-2 bg-white text-xs hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
+          class="border-b-2 bg-white text-xs hover:bg-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
         >
           <td
             class="whitespace-nowrap px-6 py-4 font-bold"
             scope="row"
           >
-            1
+            <div
+              class="h-2.5 w-48 animate-pulse rounded-full bg-gray-200 dark:bg-gray-700"
+            />
           </td>
           <td
             class="px-6 py-4"
           >
-            <p>
-              test employee
-            </p>
-            <p>
-              test@example.com
-            </p>
+            <div
+              class="h-2.5 w-48 animate-pulse rounded-full bg-gray-200 dark:bg-gray-700"
+            />
           </td>
           <td
-            class="px-6 py-4 capitalize"
+            class="px-6 py-4"
           >
-            <span
-              class="rounded-md px-2 py-1 border border-green-300 bg-green-100 text-green-800"
-            >
-              active
-            </span>
+            <div
+              class="h-2.5 w-48 animate-pulse rounded-full bg-gray-200 dark:bg-gray-700"
+            />
           </td>
           <td
-            class="px-6 py-4 text-right"
+            class="px-6 py-4"
           >
-            <button
-              class="text-white bg-btn-primary-700 hover:bg-btn-primary-500 cursor-pointer rounded-lg px-2 py-2.5 text-xs font-medium focus:outline-none disabled:cursor-not-allowed"
-              type="button"
-            >
-              Edit
-            </button>
+            <div
+              class="h-2.5 w-48 animate-pulse rounded-full bg-gray-200 dark:bg-gray-700"
+            />
           </td>
         </tr>
         <tr
-          class="border-b-2 bg-white text-xs hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
+          class="border-b-2 bg-white text-xs hover:bg-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
         >
           <td
             class="whitespace-nowrap px-6 py-4 font-bold"
             scope="row"
           >
-            2
+            <div
+              class="h-2.5 w-48 animate-pulse rounded-full bg-gray-200 dark:bg-gray-700"
+            />
           </td>
           <td
             class="px-6 py-4"
           >
-            <p>
-              test employee 2
-            </p>
-            <p>
-              test2@example.com
-            </p>
+            <div
+              class="h-2.5 w-48 animate-pulse rounded-full bg-gray-200 dark:bg-gray-700"
+            />
           </td>
           <td
-            class="px-6 py-4 capitalize"
+            class="px-6 py-4"
           >
-            <span
-              class="rounded-md px-2 py-1 border border-red-300 bg-red-100 text-red-800"
-            >
-              deactivated
-            </span>
+            <div
+              class="h-2.5 w-48 animate-pulse rounded-full bg-gray-200 dark:bg-gray-700"
+            />
           </td>
           <td
-            class="px-6 py-4 text-right"
+            class="px-6 py-4"
           >
-            <button
-              class="text-white bg-btn-primary-700 hover:bg-btn-primary-500 cursor-pointer rounded-lg px-2 py-2.5 text-xs font-medium focus:outline-none disabled:cursor-not-allowed"
-              type="button"
-            >
-              Edit
-            </button>
+            <div
+              class="h-2.5 w-48 animate-pulse rounded-full bg-gray-200 dark:bg-gray-700"
+            />
+          </td>
+        </tr>
+        <tr
+          class="border-b-2 bg-white text-xs hover:bg-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
+        >
+          <td
+            class="whitespace-nowrap px-6 py-4 font-bold"
+            scope="row"
+          >
+            <div
+              class="h-2.5 w-48 animate-pulse rounded-full bg-gray-200 dark:bg-gray-700"
+            />
+          </td>
+          <td
+            class="px-6 py-4"
+          >
+            <div
+              class="h-2.5 w-48 animate-pulse rounded-full bg-gray-200 dark:bg-gray-700"
+            />
+          </td>
+          <td
+            class="px-6 py-4"
+          >
+            <div
+              class="h-2.5 w-48 animate-pulse rounded-full bg-gray-200 dark:bg-gray-700"
+            />
+          </td>
+          <td
+            class="px-6 py-4"
+          >
+            <div
+              class="h-2.5 w-48 animate-pulse rounded-full bg-gray-200 dark:bg-gray-700"
+            />
           </td>
         </tr>
       </tbody>

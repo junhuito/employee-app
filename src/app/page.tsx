@@ -1,20 +1,29 @@
 'use client';
 import { EmployeeForm } from '@/components/EmployeeForm';
 import { Modal } from '@/components/Modal';
-import { EmployeeTable } from '@/components/EmployeeTable';
-import { useToggle } from '@/hooks';
+import {
+  Direction,
+  EmployeeTable,
+  SortAttributes,
+} from '@/components/EmployeeTable';
 import { useAppSelector } from '@/redux/hook';
 import {
+  fetchEmployeeLoading,
   getEmployee,
   selectEmployee,
+  sortEmployee,
 } from '@/redux/features/employee/employeeSlice';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useAppDispatch } from '@/redux/hook';
 import { updateEmployeeById } from '@/redux/features/employee/employeeSlice';
+import { ToastMessage } from '@/components/ToastMessage';
+import { useToggle } from '@/hooks';
+import { Header } from '@/components/Header';
+import { EmployeeData } from '@/interfaces/employee.interface';
 
 export default function Home() {
-  const { visible, setToggleStatus } = useToggle();
   const [modalContent, setModalContent] = useState(<></>);
+  const { visible, setToggleStatus } = useToggle();
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -22,33 +31,51 @@ export default function Home() {
   }, [dispatch]);
 
   const employeeTableData = useAppSelector(selectEmployee);
+  const loading = useAppSelector(fetchEmployeeLoading);
+
+  const handleActionClick = (employeeData: EmployeeData) => {
+    setModalContent(
+      <Modal visible={true} onDismiss={() => setModalContent(<></>)}>
+        <EmployeeForm
+          data={employeeData}
+          onSubmit={(employeeData) => {
+            dispatch(updateEmployeeById(employeeData));
+            setModalContent(<></>);
+            setToggleStatus(true);
+          }}
+          onCancelClick={() => {
+            setModalContent(<></>);
+          }}
+        />
+      </Modal>
+    );
+  };
+
+  const handleSort = useCallback(
+    (sort: { attribute: SortAttributes; direction: Direction }) => {
+      dispatch(sortEmployee(sort));
+    },
+    [dispatch]
+  );
 
   return (
-    <main className='space-y-4 p-10'>
-      <h1 className='mb-4 text-2xl font-extrabold text-gray-900 dark:text-white md:text-4xl'>
-        <span className='bg-gradient-to-r from-sky-400 to-emerald-600 bg-clip-text text-transparent'>
-          My AYP App
-        </span>
-      </h1>
-      <EmployeeTable
-        data={employeeTableData}
-        onActionClick={(employeeData) => {
-          setModalContent(
-            <EmployeeForm
-              data={employeeData}
-              onSubmit={(employeeData) => {
-                dispatch(updateEmployeeById(employeeData));
-                setToggleStatus(false);
-                setModalContent(<></>);
-              }}
-            />
-          );
-          setToggleStatus(true);
-        }}
-      />
-      <Modal visible={visible} onDismiss={() => setToggleStatus(false)}>
+    <>
+      <Header />
+      <main className='space-y-4 p-10'>
+        <EmployeeTable
+          isLoading={loading}
+          data={employeeTableData}
+          onCaretClick={handleSort}
+          onActionClick={handleActionClick}
+        />
         {modalContent}
-      </Modal>
-    </main>
+        <ToastMessage
+          showToast={visible}
+          duration={5}
+          onDurationEnd={() => setToggleStatus(false)}
+          message={'Employee info updated successfully'}
+        />
+      </main>
+    </>
   );
 }

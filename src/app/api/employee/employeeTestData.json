@@ -1,20 +1,22 @@
-[
-  {
-    "id": 1,
-    "name": "John",
-    "email": "john@example.com",
-    "status": "active"
-  },
-  {
-    "id": 2,
-    "name": "Ali",
-    "email": "ali@example.com",
-    "status": "active"
-  },
-  {
-    "id": 3,
-    "name": "Kelly",
-    "email": "kelly@example.com",
-    "status": "deactivated"
-  }
-]
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "John",
+      "email": "john@example.com",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "Ali",
+      "email": "ali@example.com",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "name": "Kelly",
+      "email": "kelly@example.com",
+      "status": "deactivated"
+    }
+  ]
+}

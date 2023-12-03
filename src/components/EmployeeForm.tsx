@@ -7,6 +7,7 @@ import { EmployeeData } from '@/interfaces/employee.interface';
 
 type EmployeeForm = {
   onSubmit?: (callback: EmployeeData) => void;
+  onCancelClick?: () => void;
   data: EmployeeData;
 };
 
@@ -60,7 +61,12 @@ export const EmployeeForm = (props: EmployeeForm) => {
           onChange={handleToggle}
         />
       </div>
-      <div className='flex justify-end'>
+      <div className='flex justify-between'>
+        <Button
+          text='Cancel'
+          theme='danger'
+          onClick={(e) => props.onCancelClick && props.onCancelClick()}
+        />
         <Button type='submit' text='Submit' />
       </div>
     </form>

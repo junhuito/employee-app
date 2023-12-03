@@ -57,8 +57,14 @@ exports[`EmployeeForm should render form 1`] = `
       </label>
     </div>
     <div
-      class="flex justify-end"
+      class="flex justify-between"
     >
+      <button
+        class="text-white bg-btn-danger-700 hover:bg-btn-danger-500 cursor-pointer rounded-lg px-2 py-2.5 text-xs font-medium focus:outline-none disabled:cursor-not-allowed"
+        type="button"
+      >
+        Cancel
+      </button>
       <button
         class="text-white bg-btn-primary-700 hover:bg-btn-primary-500 cursor-pointer rounded-lg px-2 py-2.5 text-xs font-medium focus:outline-none disabled:cursor-not-allowed"
         type="submit"

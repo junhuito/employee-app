@@ -8,12 +8,6 @@ export const makeStore = () => {
     },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({
-        // TODO: Implement axios service
-        // thunk: {
-        //   extraArgument: {
-        //     api: axiosService
-        //   }
-        // }
         thunk: true,
       }),
   });
