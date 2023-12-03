@@ -19,7 +19,7 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(getEmployee());
-  });
+  }, [dispatch]);
 
   const employeeTableData = useAppSelector(selectEmployee);
 
