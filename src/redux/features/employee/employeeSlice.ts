@@ -48,27 +48,15 @@ export const {
 
 export const getEmployee = () => {
   return async (dispatch: AppDispatch) => {
-    // TODO:: remove mock client data when axios is implemented
-    // mock client data
-    await new Promise((res) => {
-      setTimeout(res, 2000);
-    });
-    dispatch(
-      setEmployee([
-        {
-          id: 1,
-          name: 'John',
-          email: 'john@example.com',
-          status: EmployeeStatus.ACTIVE,
-        },
-        {
-          id: 2,
-          name: 'Ali',
-          email: 'ali@example.com',
-          status: EmployeeStatus.ACTIVE,
-        },
-      ])
-    );
+    // TODO:: implement axios service
+    const result = await fetch('http://localhost:3000/api/employee/', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then((response) => response.json());
+
+    dispatch(setEmployee(result.data));
   };
 };
 
